@@ -21,17 +21,17 @@ Feature: Testing scenarios on eMAG.ro
       | corturi            | Sport & Activitati in aer liber | 10                |  |  |
       | iphone 14 pro max  | Laptop, Tablete & Telefoane     | 90                |  |  |
 
-
-######## Feature: Select Product and add to cart
-
   @TC5_select_product @shop
   Scenario: Add to cart one product
-    Given Home Page: I am on eMAG homepage
-    When Home Page: I have searched the "s23 ultra" product
-    Then Home Page: I add product to basket
+    When Home Page: I search for "s23 ultra"
+    And Home Page: I add product to basket
+    When I click on the shopping cart
+    Then Home Page: I verify that I have the product in my cart
 
   @TC6_remove_product_negative_scenario_on_return_to_shop @shop
   Scenario: Remove the product from cart
-    Given Home Page: I verify that I have the product in my cart
-    When Home Page: I delete the product
-    Then Home Page: I start shopping again
+    When Home Page: I search for "s23 ultra"
+    And Home Page: I add product to basket
+    When I click on the shopping cart
+    And Home Page: I delete the product
+    Then Home Page: The product is removed from the shopping cart

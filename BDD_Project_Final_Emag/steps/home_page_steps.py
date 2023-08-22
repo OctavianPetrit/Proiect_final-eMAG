@@ -23,19 +23,19 @@ def step_impl(context,product,category):
 def step_impl(context, number_of_results):
     context.home_page_object.search_results(number_of_results)
 
-# @then('Home Page: I add product to basket')
-# def step_impl(context):
-#     context.home_page_object.select_product_s23_ultra()
-#
-#   # @TC6_remove_product
-# @given('Home Page: I verify that I have the product in my cart')
-# def step_impl(context):
-#     context.home_page_object.navigate_to_home_page()
-#     context.home_page_object.click_cart_button()
-#
-# @when('Home Page: I delete the product')
-# def step_impl(context):
-#     context.home_page_object.remove_from_cart()
+@when('Home Page: I add product to basket')
+def step_impl(context):
+    context.product_page.add_to_cart()
+
+  # @TC6_remove_product
+@then('Home Page: I verify that I have the product in my cart')
+def step_impl(context):
+    context.home_page_object.navigate_to_home_page()
+    context.home_page_object.click_cart_button()
+
+@when('Home Page: I delete the product')
+def step_impl(context):
+    context.home_page_object.remove_from_cart()
 #
 # @then('Home Page: I start shopping again')
 # def step_impl(context):
