@@ -11,10 +11,7 @@ from browser import Browser
 def before_all(context):
     context.browser = Browser()
     context.product_page = ProductsPage()
-    context.home_page = HomePage()
-
-
-
+    context.home_page_object = HomePage()
 
 def after_all(context):
     context.browser.close()

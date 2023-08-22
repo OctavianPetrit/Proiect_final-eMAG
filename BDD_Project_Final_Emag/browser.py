@@ -42,7 +42,7 @@ class Browser(unittest.TestCase):
     # chrome.get("http://www.emag.ro")
     chrome.maximize_window()
     chrome.implicitly_wait(10)
-    chrome.set_page_load_timeout(10)
+    chrome.set_page_load_timeout(100)
     chrome.maximize_window()
     chrome.delete_all_cookies()
 

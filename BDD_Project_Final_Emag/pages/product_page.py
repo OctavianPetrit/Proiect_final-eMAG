@@ -7,7 +7,7 @@ class ProductsPage(Base_page):
     ADD_TO_CART = (By.ID, "//div[@class='container']//div[1]//div[1]//div[1]//div[4]//div[2]//form[1]//button[1]")
 
 
-    def add_to_cart(self, ):
+    def add_to_cart(self):
         self.chrome.find_element(self.ADD_TO_CART).click()
 
     def click_vezi_detalii_cos(self):
