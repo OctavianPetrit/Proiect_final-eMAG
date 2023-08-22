@@ -26,6 +26,7 @@ class HomePage(Base_page):
         self.chrome.find_element(*self.EMAG_LOGO)
 
     # @T1
+
     def navigate_to_home_page(self):
         self.chrome.get('https://www.emag.ro/')
 

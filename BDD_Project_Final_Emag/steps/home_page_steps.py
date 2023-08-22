@@ -86,7 +86,7 @@ def step_impl(context):
 def step_impl(context):
     context.home_page_object.remove_from_cart()
 
-@then('Home Page: I start shoping again')
+@then('Home Page: I start shopping again')
 def step_impl(context):
     context.home_page_object.continue_shop()
 

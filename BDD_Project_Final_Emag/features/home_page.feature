@@ -46,4 +46,4 @@ Feature: Testing scenarios on eMAG.ro
   Scenario: Remove the product from cart
     Given Home Page: I verify that I have the product in my cart
     When Home Page: I delete the product
-    Then Home Page: I start shoping again
+    Then Home Page: I start shopping again
